@@ -200,30 +200,30 @@
         <li class="navigation-header"><a class="navigation-header-text">Main Navigation </a><i class="navigation-header-icon material-icons">more_horiz</i>
         </li>
 
-        <li class="bold"><a class="waves-effect waves-cyan {{ '/' == request()->path() || 'dashboard' == request()->path() ? 'active' : '' }}" href="/"><i class="material-icons">settings_input_svideo</i><span class="menu-title" data-i18n="Dashboard">Dashboard</span></a>
+        <li class="bold"><a class="waves-effect waves-cyan {{ '/' == request()->path() || 'dashboard' == request()->path() ? 'active' : '' }}" href="/"><i class="material-icons">dashboard</i><span class="menu-title" data-i18n="Dashboard">Dashboard</span></a>
         </li>
         
         <li class="navigation-header"><a class="navigation-header-text">Collections</a><i class="navigation-header-icon material-icons">more_horiz</i>
         </li>
-        <li class="bold"><a class="waves-effect waves-cyan {{ 'new-collection' == request()->path() ? 'active' : '' }}" href="/new-collection"><i class="material-icons">content_paste</i><span class="menu-title" data-i18n="Mail">New Collection</span><span class="badge new badge pill pink accent-2 float-right mr-2">5</span></a>
+        <li class="bold"><a class="waves-effect waves-cyan {{ 'new-collection' == request()->path() ? 'active' : '' }}" href="/new-collection"><i class="material-icons">create</i><span class="menu-title" data-i18n="Mail">New Collection</span><span class="badge new badge pill pink accent-2 float-right mr-2">5</span></a>
         </li>
         <li class="bold"><a class="waves-effect waves-cyan {{ '' == request()->path() ? 'active' : '' }}" href="/"><i class="material-icons">person_outline</i><span class="menu-title" data-i18n="Chat">Vendor Collection</span></a>
         </li>
-        <li class="bold"><a class="waves-effect waves-cyan {{ '' == request()->path() ? 'active' : '' }}" href="/"><i class="material-icons">check</i><span class="menu-title" data-i18n="ToDo">Pending Collection</span></a>
+        <li class="bold"><a class="waves-effect waves-cyan {{ '' == request()->path() ? 'active' : '' }}" href="/"><i class="material-icons">update</i><span class="menu-title" data-i18n="ToDo">Pending Collection</span></a>
         </li>
         <li class="bold"><a class="waves-effect waves-cyan {{ '' == request()->path() ? 'active' : '' }}" href="/"><i class="material-icons">format_list_bulleted</i><span class="menu-title" data-i18n="Kanban">Revenue Heads Collection</span></a>
         </li>
-        <li class="bold"><a class="waves-effect waves-cyan {{ '' == request()->path() ? 'active' : '' }}" href="/"><i class="material-icons">content_paste</i><span class="menu-title" data-i18n="File Manager">Total Collection</span></a>
+        <li class="bold"><a class="waves-effect waves-cyan {{ '' == request()->path() ? 'active' : '' }}" href="/"><i class="material-icons">folder</i><span class="menu-title" data-i18n="File Manager">Total Collection</span></a>
         </li>
       
         <li class="navigation-header"><a class="navigation-header-text">Vendors </a><i class="navigation-header-icon material-icons">more_horiz</i>
         </li>
 
-        <li class="bold"><a class="waves-effect waves-cyan {{ '' == request()->path() ? 'active' : '' }}" href="/"><i class="material-icons">person_outline</i><span class="menu-title" data-i18n="User Profile">All Vendors</span></a>
+        <li class="bold"><a class="waves-effect waves-cyan {{ '' == request()->path() ? 'active' : '' }}" href="/"><i class="material-icons">people</i><span class="menu-title" data-i18n="User Profile">All Vendors</span></a>
         </li>
-        <li class="bold"><a class="waves-effect waves-cyan {{ '' == request()->path() ? 'active' : '' }}" href="/"><i class="material-icons">content_paste</i><span class="menu-title" data-i18n="File Manager">Fund Vendors</span></a>
+        <li class="bold"><a class="waves-effect waves-cyan {{ '' == request()->path() ? 'active' : '' }}" href="/"><i class="material-icons">account_balance_wallet</i><span class="menu-title" data-i18n="File Manager">Fund Vendors</span></a>
         </li>
-        <li class="bold"><a class="waves-effect waves-cyan {{ '' == request()->path() ? 'active' : '' }}" href="/"><i class="material-icons">content_paste</i><span class="menu-title" data-i18n="File Manager">New Vendor</span></a>
+        <li class="bold"><a class="waves-effect waves-cyan {{ '' == request()->path() ? 'active' : '' }}" href="/"><i class="material-icons">account_circle</i><span class="menu-title" data-i18n="File Manager">New Vendor</span></a>
         </li>
         <li class="bold"><a class="waves-effect waves-cyan {{ '' == request()->path() ? 'active' : '' }}" href="/"><i class="material-icons">logout</i><span class="menu-title" data-i18n="File Manager">Logout</span></a>
         </li>
