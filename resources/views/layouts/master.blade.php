@@ -931,7 +931,7 @@
       <div class="footer-copyright">
         <div class="container"><span>&copy; 
           @php
-            date("Y");
+            echo date("Y");
           @endphp          
         <a href="https://aws.com.ng" target="_blank">Ashalt WW Solution Ltd</a> All rights reserved.</span><span class="right hide-on-small-only">Designed, Developed and Managed by <a href="https://aws.com.ng/">Ashalt</a></span></div>
       </div>
