@@ -24,7 +24,9 @@
     <link rel="stylesheet" type="text/css" href="css/themes/vertical-dark-menu-template/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="css/themes/vertical-dark-menu-template/style.min.css">
     <link rel="stylesheet" type="text/css" href="css/pages/dashboard.min.css">
+    <link rel="stylesheet" type="text/css" href="vendors/sweetalert/sweetalert.css">
     <!-- END: Page Level CSS-->
+    
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="css/custom/custom.css">
     <!-- END: Custom CSS-->
@@ -260,8 +262,9 @@
         @yield('content')
     </main>
    <!--end container-->
-  </div>
 
+
+ 
 <!-- START RIGHT SIDEBAR NAV -->
 {{-- <aside id="right-sidebar-nav">
   <div id="slide-out-right" class="slide-out-right-sidenav sidenav rightside-navigation">
@@ -927,7 +930,7 @@
     
     <!-- BEGIN: Footer-->
 
-    <footer class="page-footer footer footer-static footer-light navbar-border navbar-shadow footer-fixed">
+    <footer class="page-footer footer footer-static footer-light navbar-border navbar-shadow">
       <div class="footer-copyright">
         <div class="container"><span>&copy; 
           @php
@@ -938,7 +941,13 @@
     </footer>
 
     <!-- END: Footer-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
+
     <!-- BEGIN VENDOR JS-->
+      {{-- java scripts here --}}
+    @yield('scripts');
+
     <script src="js/vendors.min.js"></script>
     <!-- BEGIN VENDOR JS-->
     <!-- BEGIN PAGE VENDOR JS-->
@@ -947,11 +956,12 @@
     <!-- BEGIN THEME  JS-->
     <script src="js/plugins.min.js"></script>
     <script src="js/search.min.js"></script>
-    <script src="js/custom/custom-script.min.js"></script>
+    {{-- <script src="js/custom/custom-script.min.js"></script> --}}
     <script src="js/scripts/customizer.min.js"></script>
     <!-- END THEME  JS-->
     <!-- BEGIN PAGE LEVEL JS-->
     <script src="js/scripts/dashboard-ecommerce.min.js"></script>
     <!-- END PAGE LEVEL JS-->
+    <script src="js/scripts/extra-components-sweetalert.min.js"></script>
   </body>
 </html>

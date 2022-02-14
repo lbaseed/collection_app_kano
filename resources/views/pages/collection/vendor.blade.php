@@ -1,0 +1,1 @@
+{{-- view collections done by specific vendor --}}

@@ -1,0 +1,1 @@
+{{-- details of all vendor wallet successful transactions goes here --}}

@@ -20,7 +20,7 @@ Route::get('/dashboard', function () {
     return view('landing');
 });
 Route::get('/new-collection', function () {
-    return view('pages.newCollection');
+    return view('pages.collection.newCollection');
 });
 
 Auth::routes();

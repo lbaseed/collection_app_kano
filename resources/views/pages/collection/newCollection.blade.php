@@ -1,3 +1,4 @@
+{{-- generate a new bill for payment --}}
 @extends('layouts.master')
 
 @section('content')
@@ -47,7 +48,7 @@
 
                                             <div class="input-field col s12">
                                                 <input id="address" type="text" class="validate">
-                                                <label for="address">Address/label>
+                                                <label for="address">Address</label>
                                             </div>
 
                                             <div class="input-field col s12">
@@ -74,11 +75,15 @@
                                                 </select>
                                                 <label>Materialize Select</label>
                                             </div>
+                                            <div class="input-field col s12">
+                                                <button type="submit" class="mb-6 z-depth-3 btn btn-large waves-effect waves-light gradient-45deg-green-teal" href="" id="save">Generate Bill</button>
+                                            </div>
                                        </div>
                                     </form>
 
 
                                     {{-- end of card content --}}
+
                                 </div>
                             </div>
                         </div>
@@ -143,4 +148,21 @@
         </div>
     </div>
 </div>
+@endsection
+
+@section('scripts')
+<script type="text/javascript">
+    $(document).ready(function() {
+        // $(document).on('click', "#save", function(e){
+        //     e.preventDefault();
+
+        //     alert("hello");
+        // });
+        $("#save").click(function(e){
+            e.preventDefault();
+
+            alert("hello");
+        })
+    });
+</script>
 @endsection
