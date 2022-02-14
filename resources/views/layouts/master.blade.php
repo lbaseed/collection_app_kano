@@ -209,13 +209,13 @@
         </li>
         <li class="bold"><a class="waves-effect waves-cyan {{ 'new-collection' == request()->path() ? 'active' : '' }}" href="/new-collection"><i class="material-icons">create</i><span class="menu-title" data-i18n="Mail">New Collection</span><span class="badge new badge pill pink accent-2 float-right mr-2">5</span></a>
         </li>
-        <li class="bold"><a class="waves-effect waves-cyan {{ '' == request()->path() ? 'active' : '' }}" href="/"><i class="material-icons">person_outline</i><span class="menu-title" data-i18n="Chat">Vendor Collection</span></a>
+        <li class="bold"><a class="waves-effect waves-cyan {{ 'vendor-collection' == request()->path() ? 'active' : '' }}" href="/vendor-collection"><i class="material-icons">person_outline</i><span class="menu-title" data-i18n="Chat">Vendor Collection</span></a>
         </li>
-        <li class="bold"><a class="waves-effect waves-cyan {{ '' == request()->path() ? 'active' : '' }}" href="/"><i class="material-icons">update</i><span class="menu-title" data-i18n="ToDo">Pending Collection</span></a>
+        <li class="bold"><a class="waves-effect waves-cyan {{ 'pending' == request()->path() ? 'active' : '' }}" href="/pending"><i class="material-icons">update</i><span class="menu-title" data-i18n="ToDo">Pending Collection</span></a>
         </li>
-        <li class="bold"><a class="waves-effect waves-cyan {{ '' == request()->path() ? 'active' : '' }}" href="/"><i class="material-icons">format_list_bulleted</i><span class="menu-title" data-i18n="Kanban">Revenue Heads Collection</span></a>
+        <li class="bold"><a class="waves-effect waves-cyan {{ 'agency' == request()->path() ? 'active' : '' }}" href="/agency"><i class="material-icons">format_list_bulleted</i><span class="menu-title" data-i18n="Kanban">Agency Collection</span></a>
         </li>
-        <li class="bold"><a class="waves-effect waves-cyan {{ '' == request()->path() ? 'active' : '' }}" href="/"><i class="material-icons">folder</i><span class="menu-title" data-i18n="File Manager">Total Collection</span></a>
+        <li class="bold"><a class="waves-effect waves-cyan {{ 'total-collection' == request()->path() ? 'active' : '' }}" href="/total-collection"><i class="material-icons">folder</i><span class="menu-title" data-i18n="File Manager">Total Collection</span></a>
         </li>
       
         <li class="navigation-header"><a class="navigation-header-text">Vendors </a><i class="navigation-header-icon material-icons">more_horiz</i>

@@ -19,9 +19,20 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('landing');
 });
-Route::get('/new-collection', function () {
-    return view('pages.collection.newCollection');
-});
+
+// first links block
+Route::get('/new-collection', function () { return view('pages.collection.newCollection'); });
+Route::get('/vendor-collection', function () { return view('pages.collection.vendor'); });
+Route::get('/pending', function () { return view('pages.collection.pending'); });
+Route::get('/total-collection', function () { return view('pages.collection.total'); });
+Route::get('/agency-collection', function () { return view('pages.collection.agency'); });
+
+// config settings
+Route::get('/agency', function () { return view('pages.config.agency'); });
+Route::get('/revenue-heads', function () { return view('pages.config.heads'); });
+Route::get('/settings', function () { return view('pages.config.settings'); });
+
+
 
 Auth::routes();
 
