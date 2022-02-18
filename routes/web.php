@@ -32,6 +32,10 @@ Route::get('/agency', function () { return view('pages.config.agency'); });
 Route::get('/revenue-heads', function () { return view('pages.config.heads'); });
 Route::get('/settings', function () { return view('pages.config.settings'); });
 
+// vendors and users
+Route::get('/vendor', function () { return view('pages.vendor'); });
+Route::get('/fund', function () { return view('pages.wallet.fund'); });
+
 
 
 Auth::routes();

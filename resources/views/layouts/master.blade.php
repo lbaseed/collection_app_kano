@@ -221,9 +221,9 @@
         <li class="navigation-header"><a class="navigation-header-text">Vendors </a><i class="navigation-header-icon material-icons">more_horiz</i>
         </li>
 
-        <li class="bold"><a class="waves-effect waves-cyan {{ '' == request()->path() ? 'active' : '' }}" href="/"><i class="material-icons">people</i><span class="menu-title" data-i18n="User Profile">All Vendors</span></a>
+        <li class="bold"><a class="waves-effect waves-cyan {{ 'vendor' == request()->path() ? 'active' : '' }}" href="/vendor"><i class="material-icons">people</i><span class="menu-title" data-i18n="User Profile">All Vendors</span></a>
         </li>
-        <li class="bold"><a class="waves-effect waves-cyan {{ '' == request()->path() ? 'active' : '' }}" href="/"><i class="material-icons">account_balance_wallet</i><span class="menu-title" data-i18n="File Manager">Fund Vendors</span></a>
+        <li class="bold"><a class="waves-effect waves-cyan {{ 'fund' == request()->path() ? 'active' : '' }}" href="/fund"><i class="material-icons">account_balance_wallet</i><span class="menu-title" data-i18n="File Manager">Fund Vendors</span></a>
         </li>
         <li class="bold"><a class="waves-effect waves-cyan {{ '' == request()->path() ? 'active' : '' }}" href="/"><i class="material-icons">account_circle</i><span class="menu-title" data-i18n="File Manager">New Vendor</span></a>
         </li>
