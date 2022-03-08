@@ -21,20 +21,22 @@ Route::get('/dashboard', function () {
 });
 
 // first links block
-Route::get('/new-collection', function () { return view('pages.collection.newCollection'); });
-Route::get('/vendor-collection', function () { return view('pages.collection.vendor'); });
-Route::get('/pending', function () { return view('pages.collection.pending'); });
-Route::get('/total-collection', function () { return view('pages.collection.total'); });
-Route::get('/agency-collection', function () { return view('pages.collection.agency'); });
+Route::get('collection/new-collection', function () { return view('pages.collection.newCollection'); });
+Route::get('collection/vendor-collection', function () { return view('pages.collection.vendor'); });
+Route::get('collection/pending', function () { return view('pages.collection.pending'); });
+Route::get('collection/total-collection', function () { return view('pages.collection.total'); });
+Route::get('collection/agency-collection', function () { return view('pages.collection.agency'); });
 
 // config settings
-Route::get('/agency', function () { return view('pages.config.agency'); });
-Route::get('/revenue-heads', function () { return view('pages.config.heads'); });
-Route::get('/settings', function () { return view('pages.config.settings'); });
+Route::get('settings/agency', function () { return view('pages.config.agency'); });
+Route::get('settings/revenue-items', function () { return view('pages.config.heads'); });
+Route::get('settings/settings', function () { return view('pages.config.settings'); });
 
 // vendors and users
-Route::get('/vendor', function () { return view('pages.vendor'); });
-Route::get('/fund', function () { return view('pages.wallet.fund'); });
+Route::get('vendor/vendor', function () { return view('pages.vendor'); });
+Route::get('vendor/fund', function () { return view('pages.wallet.fund'); });
+Route::get('vendor/wallets', function () { return view('pages.wallet.wallets'); });
+// Route::get('vendor/logout', function () { return view('pages.wallet.fund'); });
 
 
 

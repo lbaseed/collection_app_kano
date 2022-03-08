@@ -213,4 +213,16 @@
     
     <div class="mt-10"></div>
  </div>
+
+   @section('script')
+    <!-- BEGIN PAGE LEVEL JS-->
+    <script src="js/scripts/dashboard-ecommerce.min.js"></script>
+    <!-- END PAGE LEVEL JS-->
+    <script src="js/scripts/extra-components-sweetalert.min.js"></script>
+
+    <script>
+      //  js code here
+    </script>
+   @endsection
+
 @endsection

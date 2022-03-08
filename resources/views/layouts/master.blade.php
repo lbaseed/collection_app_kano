@@ -207,28 +207,39 @@
         
         <li class="navigation-header"><a class="navigation-header-text">Collections</a><i class="navigation-header-icon material-icons">more_horiz</i>
         </li>
-        <li class="bold"><a class="waves-effect waves-cyan {{ 'new-collection' == request()->path() ? 'active' : '' }}" href="/new-collection"><i class="material-icons">create</i><span class="menu-title" data-i18n="Mail">New Collection</span><span class="badge new badge pill pink accent-2 float-right mr-2">5</span></a>
+        <li class="bold"><a class="waves-effect waves-cyan {{ request()->is('collection/new-collection*') ? 'active' : '' }}" href="collection/new-collection"><i class="material-icons">create</i><span class="menu-title" data-i18n="Mail">New Collection</span><span class="badge new badge pill pink accent-2 float-right mr-2">5</span></a>
         </li>
-        <li class="bold"><a class="waves-effect waves-cyan {{ 'vendor-collection' == request()->path() ? 'active' : '' }}" href="/vendor-collection"><i class="material-icons">person_outline</i><span class="menu-title" data-i18n="Chat">Vendor Collection</span></a>
+        <li class="bold"><a class="waves-effect waves-cyan {{ request()->is('collection/vendor-collection*') ? 'active' : '' }}" href="collection/vendor-collection"><i class="material-icons">person_outline</i><span class="menu-title" data-i18n="Chat">Vendor Collection</span></a>
         </li>
-        <li class="bold"><a class="waves-effect waves-cyan {{ 'pending' == request()->path() ? 'active' : '' }}" href="/pending"><i class="material-icons">update</i><span class="menu-title" data-i18n="ToDo">Pending Collection</span></a>
+        <li class="bold"><a class="waves-effect waves-cyan {{ request()->is('collection/pending*') ? 'active' : '' }}" href="collection/pending"><i class="material-icons">update</i><span class="menu-title" data-i18n="ToDo">Pending Collection</span></a>
         </li>
-        <li class="bold"><a class="waves-effect waves-cyan {{ 'agency' == request()->path() ? 'active' : '' }}" href="/agency"><i class="material-icons">format_list_bulleted</i><span class="menu-title" data-i18n="Kanban">Agency Collection</span></a>
+        <li class="bold"><a class="waves-effect waves-cyan {{ request()->is('collection/agency*') ? 'active' : '' }}" href="collection/agency"><i class="material-icons">format_list_bulleted</i><span class="menu-title" data-i18n="Kanban">Agency Collection</span></a>
         </li>
-        <li class="bold"><a class="waves-effect waves-cyan {{ 'total-collection' == request()->path() ? 'active' : '' }}" href="/total-collection"><i class="material-icons">folder</i><span class="menu-title" data-i18n="File Manager">Total Collection</span></a>
+        <li class="bold"><a class="waves-effect waves-cyan {{ request()->is('collection/total-collection*') ? 'active' : '' }}" href="collections/total-collection"><i class="material-icons">folder</i><span class="menu-title" data-i18n="File Manager">Total Collection</span></a>
         </li>
       
         <li class="navigation-header"><a class="navigation-header-text">Vendors </a><i class="navigation-header-icon material-icons">more_horiz</i>
         </li>
 
-        <li class="bold"><a class="waves-effect waves-cyan {{ 'vendor' == request()->path() ? 'active' : '' }}" href="/vendor"><i class="material-icons">people</i><span class="menu-title" data-i18n="User Profile">All Vendors</span></a>
+        <li class="bold"><a class="waves-effect waves-cyan {{ request()->is('vendor/vendor*') ? 'active' : '' }}" href="vendor/vendor"><i class="material-icons">people</i><span class="menu-title" data-i18n="User Profile">Vendors</span></a>
         </li>
-        <li class="bold"><a class="waves-effect waves-cyan {{ 'fund' == request()->path() ? 'active' : '' }}" href="/fund"><i class="material-icons">account_balance_wallet</i><span class="menu-title" data-i18n="File Manager">Fund Vendors</span></a>
+        <li class="bold"><a class="waves-effect waves-cyan {{ request()->is('vendor/fund') ? 'active' : '' }}" href="vendor/fund"><i class="material-icons">account_balance_wallet</i><span class="menu-title" data-i18n="File Manager">Fund Vendors</span></a>
         </li>
-        <li class="bold"><a class="waves-effect waves-cyan {{ '' == request()->path() ? 'active' : '' }}" href="/"><i class="material-icons">account_circle</i><span class="menu-title" data-i18n="File Manager">New Vendor</span></a>
+        <li class="bold"><a class="waves-effect waves-cyan {{ request()->is('vendor/wallets') ? 'active' : '' }}" href="vendor/wallets"><i class="material-icons">account_balance_wallet</i><span class="menu-title" data-i18n="File Manager">All Wallets</span></a>
         </li>
-        <li class="bold"><a class="waves-effect waves-cyan {{ '' == request()->path() ? 'active' : '' }}" href="/"><i class="material-icons">logout</i><span class="menu-title" data-i18n="File Manager">Logout</span></a>
+        <li class="bold"><a class="waves-effect waves-cyan " href="vendor/logout"><i class="material-icons">logout</i><span class="menu-title" data-i18n="File Manager">Logout</span></a>
         </li>
+
+        <li class="navigation-header"><a class="navigation-header-text">Configuration </a><i class="navigation-header-icon material-icons">more_horiz</i>
+        </li>
+
+        <li class="bold"><a class="waves-effect waves-cyan {{ request()->is('settings/agency*') ? 'active' : '' }}" href="settings/agency"><i class="material-icons">people</i><span class="menu-title" data-i18n="User Profile">Agencies</span></a>
+        </li>
+        <li class="bold"><a class="waves-effect waves-cyan {{ request()->is('settings/revenue-items*') ? 'active' : '' }}" href="settings/revenue-items"><i class="material-icons">list</i><span class="menu-title" data-i18n="File Manager">Revenue Items</span></a>
+        </li>
+        <li class="bold"><a class="waves-effect waves-cyan {{ request()->is('settings/settings*') ? 'active' : '' }}" href="settings/settings"><i class="material-icons">list</i><span class="menu-title" data-i18n="File Manager">General Settings</span></a>
+        </li>
+        
         
         {{-- <li class="navigation-header"><a class="navigation-header-text">Misc </a><i class="navigation-header-icon material-icons">more_horiz</i>
         </li>
@@ -258,7 +269,7 @@
     <!-- END: SideNav-->
 
     <!-- BEGIN: Page Main-->
-    <main class="py-4">
+    <main class="py-4" style="min-height: 750px">
         @yield('content')
     </main>
    <!--end container-->
@@ -763,7 +774,7 @@
       </form>
     </li>
   </ul>
-</aside> --}}
+  </aside> --}}
 <!-- END RIGHT SIDEBAR NAV -->
 
           </div>
@@ -946,7 +957,7 @@
 
     <!-- BEGIN VENDOR JS-->
       {{-- java scripts here --}}
-    @yield('scripts');
+    
 
     <script src="js/vendors.min.js"></script>
     <!-- BEGIN VENDOR JS-->
@@ -959,9 +970,10 @@
     {{-- <script src="js/custom/custom-script.min.js"></script> --}}
     <script src="js/scripts/customizer.min.js"></script>
     <!-- END THEME  JS-->
-    <!-- BEGIN PAGE LEVEL JS-->
-    <script src="js/scripts/dashboard-ecommerce.min.js"></script>
-    <!-- END PAGE LEVEL JS-->
-    <script src="js/scripts/extra-components-sweetalert.min.js"></script>
+
+   
+
+
+    @yield('scripts');
   </body>
 </html>
