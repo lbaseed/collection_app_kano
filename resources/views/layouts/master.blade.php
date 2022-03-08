@@ -269,7 +269,7 @@
     <!-- END: SideNav-->
 
     <!-- BEGIN: Page Main-->
-    <main class="py-4" style="min-height: 750px">
+    <main class="py-4" style="min-height: 800px">
         @yield('content')
     </main>
    <!--end container-->
