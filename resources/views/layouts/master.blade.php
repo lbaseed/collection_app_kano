@@ -970,10 +970,6 @@
     {{-- <script src="js/custom/custom-script.min.js"></script> --}}
     <script src="js/scripts/customizer.min.js"></script>
     <!-- END THEME  JS-->
-
-   
-
-
     @yield('scripts');
   </body>
 </html>
