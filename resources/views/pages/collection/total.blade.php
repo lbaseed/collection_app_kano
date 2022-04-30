@@ -12,13 +12,13 @@
             <div class="container">
               <div class="row">
                 <div class="col s12 m6 l6">
-                  <h5 class="breadcrumbs-title mt-0 mb-0"><span>Total Collection</span></h5>
+                  <h5 class="breadcrumbs-title mt-0 mb-0"><span>Total Revenue Collected</span></h5>
                 </div>
                 <div class="col s12 m6 l6 right-align-md">
                   <ol class="breadcrumbs mb-0">
                     <li class="breadcrumb-item"><a href="/">Home</a>
                     </li>
-                    <li class="breadcrumb-item"><a href="#">total</a>
+                    <li class="breadcrumb-item"><a href="#">Total</a>
                     </li>
                     
                   </ol>

@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AgencyController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,7 +31,7 @@ Route::get('collection/total-collection', function () { return view('pages.colle
 Route::get('collection/agency-collection', function () { return view('pages.collection.agency'); });
 
 // config settings
-Route::get('settings/agency', function () { return view('pages.config.agency'); });
+Route::resource('settings/agency', AgencyController::class );
 Route::get('settings/revenue-items', function () { return view('pages.config.heads'); });
 Route::get('settings/settings', function () { return view('pages.config.settings'); });
 
@@ -42,4 +45,4 @@ Route::get('vendor/wallets', function () { return view('pages.wallet.wallets'); 
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
