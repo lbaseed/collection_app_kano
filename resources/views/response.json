@@ -1,0 +1,45 @@
+Payload data
+{
+    "insuranceType": "PMO",
+    "fullName": "Abdulbasid Haruna",
+    "mobileNumber": "2348064701206", //all phone number must start with 234
+    "emailAddress": "abdul@aws.com.ng",
+    "adddress": "Gombe",
+    "state": "Gombe",
+    "occupation": "Business man",
+    "dateOFBirth": "1990-04-15T09:21:13.502Z",
+    "gender": "male",
+    "vehicleColour": "Black",
+    "vehicleMake": "Honda",
+    "vehicleModel": "Accord",
+    "yearOfMake": 2011,
+    "registrationNumber": "GME352TE",
+    "engineNumber": "98789",
+    "chassisNumber": "1234567891112132", //16 digit chasis
+    "commercialType": "string"
+}
+
+
+Reponse
+{
+    "status": "Success",
+    "statusCode": 1,
+    "message": "Policy generated successfully",
+    "modelToReturn": {
+      "transId": "GNgCOmts",
+      "reprintCode": "GNgCOmts",
+      "policyNumber": "IEI/TP/0722/13108749/PMO",
+      "certificateNumber": "WAX1\\13108749PMO",
+      "fullName": "Abdulbasid Haruna",
+      "registrationNumber": "GME352TE",
+      "chassisNumber": "1234567891112132",
+      "engineNumber": "98789",
+      "vehicleMake": "Honda",
+      "vehicleModel": "Accord",
+      "yearOfMake": "2011",
+      "commencementDate": "2022-07-11T00:00:00+01:00",
+      "expirationDate": "2023-07-10T11:51:35.1529517+01:00",
+      "renewalDate": "2023-07-11T11:51:35.1529522+01:00",
+      "niidResponse": "Pending NIID Upload"
+    }
+  }

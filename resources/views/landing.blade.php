@@ -21,7 +21,7 @@
                    <div class="mr-2 right-align">
                       <h6 class="mb-0 white-text">Daily Collection</h6>
                       <br>
-                      <h5 class="mb-0 white-text">N 5, 231, 690, 546</h5>
+                      <h5 class="mb-0 white-text">N {{number_format($revenue->daily)}}</h5>
                       
                    </div>
                 </div>
@@ -34,12 +34,12 @@
                 <div class="row">
                    <div class="col s7 m7">
                       <i class="material-icons background-round mt-5">perm_identity</i>
-                      <p> Receipts Printed </p>
+                      <p> Policess Printed </p>
                    </div>
                    <div class="col s5 m5 right-align">
-                      <h6 class="mb-0 white-text">Daily Transactions</h6>
-                      
-                      <h5 class="mb-0 white-text">#2,900</h5>
+                      <h6 class="mb-0 white-text">Daily Policies</h6>
+                      <br>
+                      <h5 class="mb-0 white-text"># {{$revenue->daily_trans}}</h5>
                    </div>
                 </div>
              </div>
@@ -56,7 +56,7 @@
                    <div class="mr-2 right-align">
                      <h6 class="mb-0 white-text">Monthly Collection</h6>
                      <br>
-                     <h5 class="mb-0 white-text">N 195, 231, 690, 546</h5>
+                     <h5 class="mb-0 white-text">N {{number_format($revenue->monthly)}}</h5>
                    </div>
                 </div>
              </div>
@@ -68,12 +68,12 @@
                 <div class="row">
                    <div class="col s7 m7">
                       <i class="material-icons background-round mt-5">perm_identity</i>
-                      <p> Receipts Printed </p>
+                      <p> Policies Printed </p>
                    </div>
                    <div class="col s5 m5 right-align">
                      <h6 class="mb-0 white-text">Monthly Transactions</h6>
                       
-                     <h5 class="mb-0 white-text">#112,900</h5>
+                     <h5 class="mb-0 white-text"># {{$revenue->monthly_trans}}</h5>
                      
                    </div>
                 </div>
@@ -93,10 +93,10 @@
                 <h6 class="card-title font-weight-600 mb-0">Quick Links</h6>
                
                 <table class="highlight">
-                  <tr><td><a href='/new-collection'>New Collection</a></td></tr>
-                  <tr><td><a href=''>Collection Reports</a></td></tr>
-                  <tr><td><a href=''>Manage Wallets</a></td></tr>
-                  <tr><td><a href=''>Manage Vendors</a></td></tr>
+                  <tr><td><a href="{{route("bills")}}">New Insurance Policy</a></td></tr>
+                  <tr><td><a href="{{route("reports")}}">Collection Reports</a></td></tr>
+                  <tr><td><a href=''>Place holder</a></td></tr>
+                  <tr><td><a href=''>Place Holder</a></td></tr>
                   <tr><td><a href=''>Logout</a></td></tr>
                </table>
              </div>
@@ -111,26 +111,27 @@
 
                <ul class="collapsible collapsible-accordion">
                   <li>
-                     <div class="collapsible-header"> High Court of Justice </div>
+                     <div class="collapsible-header"> Daily Items Summary </div>
                      <div class="collapsible-body">
 
-                        <table>
-                           <tr><td><a href=''>Court Fees</a></td></tr>
-                           <tr><td><a href=''>Court Fines</a></td></tr>
-                           <tr><td><a href=''>Probate</a></td></tr>
+                        <table class="highlight">
+                           <tr><td>Motor Vehicle (Comm) </td><td style='text-align:right;'>N {{number_format($stat->revenue->daily->cvo)}} [{{number_format($stat->trans->daily->cvo)}}]</td></tr>
+                           <tr><td>Motor Vehicle (Private) </td><td style='text-align:right;'>N {{number_format($stat->revenue->daily->pmo)}}  [{{number_format($stat->trans->daily->pmo)}}]</td></tr>
+                           <tr><td>Motorcyle/Tricycle  </td><td style='text-align:right;'>N {{number_format($stat->revenue->daily->mco)}}  [{{number_format($stat->trans->daily->mco)}}]</td></tr>
+                           
                         </table>
                      </div>
                   </li>
                </ul>
                <ul class="collapsible collapsible-accordion">
                   <li>
-                     <div class="collapsible-header"> Sharia Court of Appeal </div>
+                     <div class="collapsible-header"> Monthly Items Summary </div>
                      <div class="collapsible-body">
 
                         <table>
-                           <tr><td><a href=''>Court Fees</a></td></tr>
-                           <tr><td><a href=''>Court Fines</a></td></tr>
-                           <tr><td><a href=''>Probate</a></td></tr>
+                           <tr><td>Motor Vehicle (Comm) </td><td style='text-align:right;'>N {{number_format($stat->revenue->monthly->cvo)}} [{{number_format($stat->trans->monthly->cvo)}}]</td></tr>
+                           <tr><td>Motor Vehicle (Private) </td><td style='text-align:right;'>N {{number_format($stat->revenue->monthly->pmo)}} [{{number_format($stat->trans->monthly->pmo)}}]</td></tr>
+                           <tr><td>Motorcyle/Tricycle  </td><td style='text-align:right;'>N {{number_format($stat->revenue->monthly->mco)}} [{{number_format($stat->trans->monthly->mco)}}]</td></tr>
                         </table>
                      </div>
                   </li>
@@ -139,7 +140,7 @@
             
           </div>
        </div>
-       <div class="col s12 m4">
+       {{-- <div class="col s12 m4">
           <div class="card animate fadeRight">
              <div class="card-content center">
                 <h6 class="card-title font-weight-800 mb-0">Monthly Collection</h6>
@@ -173,10 +174,10 @@
              </div>
              
           </div>
-       </div>
+       </div> --}}
     </div>
     <div class="row">
-      <div class="col s12 m6">
+      <div class="col s12 m4">
          {{-- Online Vendors --}}
          <ul class="collapsible collapsible-accordion">
             <li>
@@ -193,7 +194,7 @@
          </ul>
       </div>
       {{-- offline Vendors --}}
-      <div class="col s12 m6">
+      <div class="col s12 m4">
 
          <ul class="collapsible collapsible-accordion">
             <li>
